@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Beast King</title>
+<style>
+body {
+    background: #0a0a0a;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* LOGIN */
+#login {
+    width: 300px;
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00aa;
+    border: 2px solid #ff00aa;
+}
+
+#login input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+#login button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(90deg,#ff00aa,#ff4dd2);
+    color: black;
+    font-weight: bold;
+}
+
+/* PAINEL */
+#painel {
+    width: 320px;
+    background: #111;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 25px #ff00aa;
+    border: 2px solid #ff00aa;
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #ff00aa;
+    text-shadow: 0 0 10px #ff00aa;
+}
+
+.opcao {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.slider-text {
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+#painel button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg,#ff00aa,#ff4dd2);
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 15px #ff00aa;
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+    <h2>Login</h2>
+    <input type="text" id="user" placeholder="Usuário">
+    <input type="password" id="pass" placeholder="Senha">
+    <button onclick="entrar()">Entrar</button>
+</div>
+
+<!-- PAINEL -->
+<div id="painel">
+    <h1>Beast-King</h1>
+
+    <div class="opcao">
+        <label>Aimbot</label>
+        <input type="checkbox">
+    </div>
+
+    <div class="opcao">
+        <label>ESP</label>
+        <input type="checkbox">
+    </div>
+
+    <div class="opcao">
+        <label>No Recoil</label>
+        <input type="checkbox">
+    </div>
+
+    <div class="opcao">
+        <label>Aim Lock</label>
+        <input type="checkbox">
+    </div>
+
+    <div class="slider-text">Aim FOV (0-100)</div>
+    <input type="range" min="0" max="100">
+
+    <div class="slider-text">Precisão (0-100)</div>
+    <input type="range" min="0" max="100">
+
+    <div class="slider-text">Função Extra</div>
+    <input type="range" min="0" max="100">
+
+    <select>
+        <option>Cabeça</option>
+        <option>Pescoço</option>
+        <option>Peito</option>
+    </select>
+
+    <button onclick="injetar()">INJETAR</button>
+</div>
+
+<script>
+function entrar(){
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if(u === "menorzin" && p === "noah123"){
+        document.getElementById("login").style.display = "none";
+        document.getElementById("painel").style.display = "block";
+    } else {
+        alert("Usuário ou senha incorretos");
+    }
+}
+
+function injetar(){
+    alert("Funções ativadas!");
+}
+</script>
+
+</body>
+</html>
